@@ -1,0 +1,952 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li> <a href="/verinfo"> Ver informacion</a></li>
+    </ul>
+  </nav>
+    <div class="container">
+        
+    </div>
+    <br>
+    <div class="container">
+        <h1>My Responsive Web Page</h1>
+        <form id="mongo" class="form1">
+            <div class="container">
+              <h2>Formulario de Registro</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="apellido">Apellido:</label>
+                  <input type="text" id="apellido" name="apellido" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="identificacion">Identificación:</label>
+                  <input type="text" id="identificacion" name="identificacion" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" id="direccion" name="direccion" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="email">Correo electrónico:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="telefono">Teléfono:</label>
+                  <input type="tel" id="telefono" name="telefono" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="celular">Celular:</label>
+                  <input type="tel" id="celular" name="celular" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="lugarNacimiento">Lugar de nacimiento:</label>
+                  <input type="text" id="lugarNacimiento" name="lugarNacimiento" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                  <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="Ubicacion">Ubicación:</label>
+                  <input type="text" id="Ubicacion" name="Ubicacion" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="religion">Religión:</label>
+                  <input type="text" id="religion" name="religion" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="estadoCivil">Estado civil:</label>
+                  <select id="estadoCivil" name="estadoCivil" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viudo">Viudo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="hobies">Hobbies:</label>
+                  <textarea id="hobies" name="hobies" required></textarea>
+                </div>
+                <div class="col-md-6">
+                  <label for="deportes">Deportes:</label>
+                  <textarea id="deportes" name="deportes" required></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="numeroHijos">Número de hijos:</label>
+                  <input type="number" id="numeroHijos" name="numeroHijos" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="submit">Enviar</button>
+                </div>
+              </div>
+            </div>
+        </form>
+        <div id="responseMogo"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+   
+    
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/48b7f93703.js" crossorigin="anonymous"></script>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlte.min.css">
+  </head>
+  <body class="hold-transition layout-top-nav">
+    <div class="wrapper">
+
+      <!-- Navbar -->
+
+      <!-- /.navbar -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+      
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <div class="content mt-3">
+          <div class="container">
+            <!-- /.clientes -->
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card card-primary card-outline card-tabs">
+                  <div class="card-header p-0 pt-1 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                      <li class="nav-item ">
+                        <a class="nav-link active" id="custom-tabs-three-tab" data-toggle="pill" href="#custom-tabs-three-clientCtr" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Crear</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " id="custom-tabs-three-tab" data-toggle="pill" href="#custom-tabs-three-clientUpdate" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="true">Actualizar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-three-tab" data-toggle="pill" href="#custom-tabs-three-clientDelete" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Borrar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-three-tab" data-toggle="pill" href="#custom-tabs-three-clientSearch" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Mostrar</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content" id="custom-tabs-three-tabContent">
+                      <div class="tab-pane active fade show" id="custom-tabs-three-clientCtr" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                        <form action="/insertarCliente" method="post">
+                          <div class="card card-info">
+                            <div class="card-header">
+                              <h3 class="card-title">clientes</h3>
+                            </div>
+                            <div class="card-body">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" ><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="Identificacion" class="form-control" placeholder="Identificacion" name="identificacion">
+                              </div>
+              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></span>
+                                </div>
+                                <input type="Nombre" class="form-control" placeholder="Nombre" name="nombre">          
+                              </div>
+                              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
+                                </div>
+                                <input type="Apellido" class="form-control" placeholder="Apellido" name="apellido">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></span>
+                                </div>
+                                <input type="Direccion" class="form-control" placeholder="Direccion" name="direccion">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Fecha de nacimiento" name="fechaNacimiento">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Email" name="email">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                </div>
+                                <input type="tel" class="form-control" placeholder="Teléfono de casa" name="telcasa">
+                              </div>
+                              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-mobile"></i></span>
+                                </div>
+                                <input type="tel" class="form-control" placeholder="Celular" name="cel">
+                              </div>
+                              <!-- /.row -->
+        
+                              <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-clientUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+                        <form>
+                          <div class="card card-info">
+                            <div class="card-header">
+                              <h3 class="card-title">clientes</h3>
+                            </div>
+                            <div class="card-body">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="Identificacion" class="form-control" placeholder="Identificacion">
+                              </div>
+              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
+                                </div>
+                                <input type="Nombre" class="form-control" placeholder="Nombre">          
+                              </div>
+                              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
+                                </div>
+                                <input type="Apellido" class="form-control" placeholder="Apellido">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
+                                </div>
+                                <input type="Direccion" class="form-control" placeholder="Direccion">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></i></span>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Fecha de nacimiento">
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                </div>
+                                <input type="tel" class="form-control" placeholder="Teléfono de casa">
+                              </div>
+                              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-mobile"></i></span>
+                                </div>
+                                <input type="tel" class="form-control" placeholder="Celular">
+                              </div>
+                              <!-- /.row -->
+        
+                              <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <input type="submit" name="Enviarinfo" id="info" value="Actualizar" class="btn btn-success">
+                            </div>
+                          </div>
+                        </form>
+                        
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-clientDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                        <div class="input-group mb-3">
+
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa-solid fa-trash"></i></span>
+                          </div>
+                          <input type="Borrar" class="form-control" placeholder="Identificacion">
+                        </div>
+                        
+                        <div class="card-footer">
+                          <input type="submit" name="Borrar" id="info" value="Enviar informacion" class="btn btn-success">
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-clientSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
+                        <div class="card">
+                          <div class="card-header bg-primary">
+                            <button class="btn btn-success mx-auto" onclick="cargarDatos()"> Cargar datos</button>
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body table-responsive p-0" style="height: 300px;">
+                            <table class="table table-head-fixed text-nowrap" id="clientes">
+                              <thead>
+                                <tr>
+                                  <th>id</th>
+                                  <th>Nombre</th>
+                                  <th>Apellidos</th>
+                                  <th>Direccion</th>
+                                  <th>Fecha de nacimiento</th>
+                                  <th>Email</th>
+                                  <th>Telefono casa</th>
+                                  <th>Celular</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card -->
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card card-primary card-outline card-tabs">
+                  <div class="card-header p-0 pt-1 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                      <li class="nav-item ">
+                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-productos" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Crear</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-productosUpdate" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="true">Actualizar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-productosDelete" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Borrar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-three-settings-tab" data-toggle="pill" href="#custom-tabs-three-productosSearch" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Mostrar</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content" id="custom-tabs-three-tabContent">
+                      <div class="tab-pane active fade show" id="custom-tabs-three-productos" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                        <form id="formProductos">
+                          <div class="card card-info">
+                            <div class="card-header">
+                              <h3 class="card-title">Productos</h3>
+                            </div>
+                            <div class="card-body">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="Idproducto" class="form-control" placeholder="Identificacion">
+                              </div>
+              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="cantproductos" class="form-control" name="" placeholder="cantidad Disponible">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="Costo" class="form-control" name="" placeholder="Costo">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="Precio_venta" class="form-control" name="" placeholder="Precio de venta">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="Codigo" class="form-control" placeholder="Codigo_catProducto" name="codCatProd">
+                              </div>
+
+                              
+                              <button type="button" style="display: none;" class="btn btn-default" id="boton"  data-toggle="modal" data-target="#modal-default">
+                                Launch Default Modal
+                              </button>
+                              <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h4 class="modal-title">Default Modal</h4>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        </div>
+                                        <input type="Codigo" class="form-control" id="prodsDescrp" placeholder="Descripcion" name="Descripcion" value="">
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer justify-content-between">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
+                                      <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+                                    </div>
+                                  </div>
+                                  <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                              </div>
+                              
+
+                              <!-- /.row -->
+        
+                              <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-productosUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+                        <form>
+                          <div class="card card-info">
+                            <div class="card-header">
+                              <h3 class="card-title">Productos</h3>
+                            </div>
+                            <div class="card-body">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="Idproducto" class="form-control" placeholder="Identificacion">
+                              </div>
+              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="cantproductos" class="form-control" name="" placeholder="cantidad Disponible">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="Costo" class="form-control" name="" placeholder="Costo">          
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="Precio_venta" class="form-control" name="" placeholder="Precio de venta">          
+                              </div>
+
+                              <!-- /.row -->
+        
+                              <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <input type="submit" name="Enviarinfo" id="info" value="Actualizar" class="btn btn-success">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-productosDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                        
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                          </div>
+                          <input type="Idproducto" class="form-control" placeholder="Identificacion">
+                          
+                        
+                        </div>
+                        <div class="card-footer">
+                          <input type="submit" name="Borrar" id="info" value="Enviar informacion" class="btn btn-success">
+                        </div>
+                      
+                      </div>
+                      
+                      <div class="tab-pane fade" id="custom-tabs-three-productosSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
+                        <div class="card">
+                          <div class="card-header bg-primary">
+                            <button class="btn btn-success" onclick="cargaProductos()">Cargar datos</button>
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body table-responsive p-0" style="height: 300px;">
+                            <table class="table table-head-fixed text-nowrap"  id="productos">
+                              <thead>
+                                <tr>
+                                  <th>idProducto</th>
+                                  <th>Descripcion</th>
+                                  <th>Catnidad disponible</th>
+                                  <th>Costo</th>
+                                  <th>Precio venta</th>
+                                  <th>Codigo categoria</th>
+                                </tr>
+                              </thead>
+                              <tbody class="mx-auto text-center">
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card -->
+                </div>
+              </div>
+              <!-- /.categoria productos -->
+              <div class="col-lg-4">
+                <div class="card card-primary card-outline card-tabs">
+                  <div class="card-header p-0 pt-1 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                      <li class="nav-item ">
+                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-Categoriaproductos" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Crear</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-categoriaUpdate" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="true">Actualizar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-categoriaDelete" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Borrar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-three-settings-tab" data-toggle="pill" href="#custom-tabs-three-categoriaSearch" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Mostrar</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content" id="custom-tabs-three-tabContent">
+                      <div class="tab-pane active fade show" id="custom-tabs-three-Categoriaproductos" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                        <form>
+                          <div class="card card-info">
+                            <div class="card-header">
+                              <h3 class="card-title">Categorias Productos</h3>
+                            </div>
+                            <div class="card-body">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="Codigo" class="form-control" placeholder="Codigo">
+                              </div>
+              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="text" class="form-control" name="" placeholder="Lugar de nacimiento">          
+                              </div>
+                              <!-- /.row -->
+        
+                              <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-categoriaUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+                        <form>
+                          <div class="card card-info">
+                            <div class="card-header">
+                              <h3 class="card-title">Categorias Productos</h3>
+                            </div>
+                            <div class="card-body">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="Codigo" class="form-control" placeholder="Codigo">
+                              </div>
+              
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                </div>
+                                <input type="text" class="form-control" name="" placeholder="Lugar de nacimiento">          
+                              </div>
+                              <!-- /.row -->
+        
+                              <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-categoriaDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                          </div>
+                          <input type="Idproducto" class="form-control" placeholder="Identificacion">
+                        </div>
+                      </div>  
+                      <div class="tab-pane fade" id="custom-tabs-three-categoriaSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
+                        <div class="card">
+                          <div class="card-header bg-primary">
+                            <h3 class="card-title ">Fixed Header Table</h3>
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body table-responsive p-0" style="height: 300px;">
+                            <table class="table table-head-fixed text-nowrap">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>User</th>
+                                  <th>Date</th>
+                                  <th>Status</th>
+                                  <th>Reason</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card -->
+                </div>
+              </div>
+            </div>
+            <!-- /.pedidos -->
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card card-primary card-outline card-tabs">
+                  <div class="card-header p-0 pt-1 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                      <li class="nav-item ">
+                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-pedidos" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Crear</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-pedidosUpdate" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="true">Actualizar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-pedidosDelete" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Borrar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-three-settings-tab" data-toggle="pill" href="#custom-tabs-three-pedidosSearch" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Mostrar</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content" id="custom-tabs-three-tabContent">
+                      <div class="tab-pane active fade show" id="custom-tabs-three-pedidos" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                        <form>
+                          <div class="card card-info">
+                            <div class="card-header">
+                              <h3 class="card-title">Pedidos</h3>
+                            </div>
+                            <div class="card-body">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="id_pedido" class="form-control" placeholder="Codigo pedido">
+                              </div>
+                              <div class="form-group">
+                                <label for="" class="form-label">Fecha de Pedido</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" placeholder="Fecha de Pedido">
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="" class="form-label">Fecha de Envio</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" placeholder="Fecha de Envio">
+                                </div>
+                              </div>
+                            
+                              <div class="form-group">
+                                <label for="" class="form-label">Fecha de Pago</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" placeholder="Fecha de Pago">
+                                </div>
+                              </div>
+
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="cantidad" class="form-control" placeholder="Cantidad">
+                              </div>
+                                
+                          
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="precio" class="form-control" placeholder="precio">
+                              </div>  
+
+                              <!-- /.row -->
+        
+                              <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-pedidosUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+                        <form>
+                          <div class="card card-info">
+                            <div class="card-header">
+                              <h3 class="card-title">Pedidos</h3>
+                            </div>
+                            <div class="card-body">
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="id_pedido" class="form-control" placeholder="Codigo pedido">
+                              </div>
+              
+                              
+                                <div class="form-group">
+                                  <label for="" class="form-label">Fecha de Pedido</label>
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                                      </div>
+                                      <input type="date" class="form-control" placeholder="Fecha de Pedido">
+                                  </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                  <label for="" class="form-label">Fecha de Envio</label>
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                                      </div>
+                                      <input type="date" class="form-control" placeholder="Fecha de Envio">
+                                  </div>
+                                </div>
+                              
+                                <div class="form-group">
+                                  <label for="" class="form-label">Fecha de Pago</label>
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                                      </div>
+                                      <input type="date" class="form-control" placeholder="Fecha de Pago">
+                                  </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                  </div>
+                                  <input type="cantidad" class="form-control" placeholder="Cantidad">
+                                </div>
+                                  
+                            
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                  </div>
+                                  <input type="precio" class="form-control" placeholder="precio">
+                                </div>  
+                              <!-- /.row -->
+        
+                              <!-- /input-group -->
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
+                            </div>
+                          </div>
+                        </form>
+
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-pedidosDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="Idproducto" class="form-control" placeholder="Identificacion">
+                          </div>
+                        <div class="card-footer">
+                          <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-pedidosSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
+                        <div class="card">
+                          <div class="card-header bg-primary">
+                            <h3 class="card-title ">Fixed Header Table</h3>
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body table-responsive p-0" style="height: 300px;">
+                            <table class="table table-head-fixed text-nowrap">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>User</th>
+                                  <th>Date</th>
+                                  <th>Status</th>
+                                  <th>Reason</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- /.card-body -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card -->
+                </div>
+                
+              </div>
+              
+            </div>  
+           
+            <!-- /.row -->
+          </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
+          Anything you want
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+      </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="jquerys/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="jquerys/bootstrap.bundle.min.js"></script>
+    <script src="js/clientes.js"></script>
+    <script src="js/productos.js"></script>
+    <!-- AdminLTE App -->
+    <script src="jquerys/adminlte.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#saveChanges').click(function() {
+          var inputValue = $('#prodsDescrp').val(); // Obtiene el valor del input
+          console.log("Valor del input: " + inputValue); // Aquí puedes hacer lo que necesites con el valor del input
+          // Actualiza el valor del input
+          $('#prodsDescrp').val(inputValue);
+        });
+      });
+    </script>
+  </body>
+</html>
+
