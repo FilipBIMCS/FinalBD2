@@ -98,7 +98,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">
+                <div class="input-group mb-3">
                   <label for="numeroHijos">Número de hijos:</label>
                   <input type="number" id="numeroHijos" name="numeroHijos" required>
                 </div>
@@ -115,7 +115,7 @@
 
     <script src="script.js"></script>
 </body>
-</html> -->
+</html> 
 <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -173,6 +173,7 @@
                             <div class="card-header">
                               <h3 class="card-title">clientes</h3>
                             </div>
+
 
                               <!-- identificacion (campo) -->
                             <div class="card-body">
@@ -234,10 +235,20 @@
                                 <!-- celular (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-mobile"></i></span>
+                                  <span class="input-group-text"><i class="fa-sharp fa-solid fa-mobile-retro"></i></span>
                                 </div>
                                 <input type="tel" class="form-control" placeholder="Celular" name="Celular">
                               </div>
+
+                              <div class="input-group mb-3">
+                                 <div class="input-group-append">
+                                   <span class="input-group-text"><i class="fa-solid fa-children"></i></span>
+                                </div>
+                                <input type="number" class="form-control" placeholder="Numero hijos" id="numeroHijos" name="numeroHijos" required>
+                              </div>
+
+                              
+                              
                               <!-- /.row -->
         
                               <!-- /input-group -->
@@ -362,6 +373,7 @@
                                   <th>Email</th>
                                   <th>Telefono casa</th>
                                   <th>Celular</th>
+                                  <th>Numero hijos</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -587,327 +599,7 @@
 
                <!-- ---------------------------------------------------- -->
               <!-- /.categoria productos -->
-              <div class="col-lg-4">
-                <div class="card card-primary card-outline card-tabs">
-                  <div class="card-header p-0 pt-1 border-bottom-0">
-                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
-                      <li class="nav-item ">
-                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-Categoriaproductos" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Crear</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link " id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-categoriaUpdate" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="true">Actualizar</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-categoriaDelete" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Borrar</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-settings-tab" data-toggle="pill" href="#custom-tabs-three-categoriaSearch" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Mostrar</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <div class="tab-content" id="custom-tabs-three-tabContent">
-                      <div class="tab-pane active fade show" id="custom-tabs-three-Categoriaproductos" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
-                        <form>
-                          <div class="card card-info">
-                            <div class="card-header">
-                              <h3 class="card-title">Categorias Productos</h3>
-                            </div>
-
-                             <!-- codigo(campo) -->
-                            <div class="card-body">
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fa fa-tag"></i></span>
-                                </div>
-                                <input type="Codigo" class="form-control" placeholder="Codigo">
-                              </div>
               
-                               <!-- Descripcion (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
-                                </div>
-                                <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
-                              </div>
-
-                             
-                              <!-- /.row -->
-        
-                              <!-- /input-group -->
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="tab-pane fade" id="custom-tabs-three-categoriaUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
-                        <form>
-                          <div class="card card-info">
-                            <div class="card-header">
-                              <h3 class="card-title">Categorias Productos</h3>
-                            </div>
-                            <div class="card-body">
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fa fa-tag"></i></span>
-                                </div>
-                                <input type="Codigo" class="form-control" placeholder="Codigo">
-                              </div>
-              
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
-                                </div>
-                                <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
-                              </div>
-                            
-                              <!-- /.row -->
-        
-                              <!-- /input-group -->
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="tab-pane fade" id="custom-tabs-three-categoriaDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                          </div>
-                          <input type="Idproducto" class="form-control" placeholder="Identificacion">
-                        </div>
-                      </div>  
-                      <div class="tab-pane fade" id="custom-tabs-three-categoriaSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
-                        <div class="card">
-                          <div class="card-header bg-primary">
-                            <h3 class="card-title ">Fixed Header Table</h3>
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body table-responsive p-0" style="height: 300px;">
-                            <table class="table table-head-fixed text-nowrap">
-                              <thead>
-                                <tr>
-                                  <th>ID</th>
-                                  <th>User</th>
-                                  <th>Date</th>
-                                  <th>Status</th>
-                                  <th>Reason</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                
-                              </tbody>
-                            </table>
-                          </div>
-                          <!-- /.card-body -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /.card -->
-                </div>
-              </div>
-            </div>
-            <!-- /.pedidos -->
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="card card-primary card-outline card-tabs">
-                  <div class="card-header p-0 pt-1 border-bottom-0">
-                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
-                      <li class="nav-item ">
-                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-pedidos" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Crear</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link " id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-pedidosUpdate" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="true">Actualizar</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-pedidosDelete" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Borrar</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-settings-tab" data-toggle="pill" href="#custom-tabs-three-pedidosSearch" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Mostrar</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <div class="tab-content" id="custom-tabs-three-tabContent">
-                      <div class="tab-pane active fade show" id="custom-tabs-three-pedidos" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
-                        <form>
-                          <div class="card card-info">
-                            <div class="card-header">
-                              <h3 class="card-title">Pedidos</h3>
-                            </div>
-                            <div class="card-body">
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                </div>
-                                <input type="id_pedido" class="form-control" placeholder="Codigo pedido">
-                              </div>
-                              <div class="form-group">
-                                <label for="" class="form-label">Fecha de Pedido</label>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-append">
-                                      <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
-                                    </div>
-                                    <input type="date" class="form-control" placeholder="Fecha de Pedido">
-                                </div>
-                              </div>
-                              
-                              <div class="form-group">
-                                <label for="" class="form-label">Fecha de Envio</label>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-append">
-                                      <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
-                                    </div>
-                                    <input type="date" class="form-control" placeholder="Fecha de Envio">
-                                </div>
-                              </div>
-                            
-                              <div class="form-group">
-                                <label for="" class="form-label">Fecha de Pago</label>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-append">
-                                      <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
-                                    </div>
-                                    <input type="date" class="form-control" placeholder="Fecha de Pago">
-                                </div>
-                              </div>
-
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                </div>
-                                <input type="cantidad" class="form-control" placeholder="Cantidad">
-                              </div>
-                                
-                          
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                </div>
-                                <input type="precio" class="form-control" placeholder="precio">
-                              </div>  
-
-                              <!-- /.row -->
-        
-                              <!-- /input-group -->
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="tab-pane fade" id="custom-tabs-three-pedidosUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
-                        <form>
-                          <div class="card card-info">
-                            <div class="card-header">
-                              <h3 class="card-title">Pedidos</h3>
-                            </div>
-                            <div class="card-body">
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                </div>
-                                <input type="id_pedido" class="form-control" placeholder="Codigo pedido">
-                              </div>
-              
-                              
-                                <div class="form-group">
-                                  <label for="" class="form-label">Fecha de Pedido</label>
-                                  <div class="input-group mb-3">
-                                      <div class="input-group-append">
-                                        <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
-                                      </div>
-                                      <input type="date" class="form-control" placeholder="Fecha de Pedido">
-                                  </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                  <label for="" class="form-label">Fecha de Envio</label>
-                                  <div class="input-group mb-3">
-                                      <div class="input-group-append">
-                                        <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
-                                      </div>
-                                      <input type="date" class="form-control" placeholder="Fecha de Envio">
-                                  </div>
-                                </div>
-                              
-                                <div class="form-group">
-                                  <label for="" class="form-label">Fecha de Pago</label>
-                                  <div class="input-group mb-3">
-                                      <div class="input-group-append">
-                                        <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
-                                      </div>
-                                      <input type="date" class="form-control" placeholder="Fecha de Pago">
-                                  </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                  <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                  </div>
-                                  <input type="cantidad" class="form-control" placeholder="Cantidad">
-                                </div>
-                                  
-                            
-                                <div class="input-group mb-3">
-                                  <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                  </div>
-                                  <input type="precio" class="form-control" placeholder="precio">
-                                </div>  
-                              <!-- /.row -->
-        
-                              <!-- /input-group -->
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
-                            </div>
-                          </div>
-                        </form>
-
-                      </div>
-                      <div class="tab-pane fade" id="custom-tabs-three-pedidosDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                            </div>
-                            <input type="Idproducto" class="form-control" placeholder="Identificacion">
-                          </div>
-                        <div class="card-footer">
-                          <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
-                        </div>
-                      </div>
-                      <div class="tab-pane fade" id="custom-tabs-three-pedidosSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
-                        <div class="card">
-                          <div class="card-header bg-primary">
-                            <h3 class="card-title ">Fixed Header Table</h3>
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body table-responsive p-0" style="height: 300px;">
-                            <table class="table table-head-fixed text-nowrap">
-                              <thead>
-                                <tr>
-                                  <th>ID</th>
-                                  <th>User</th>
-                                  <th>Date</th>
-                                  <th>Status</th>
-                                  <th>Reason</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                
-                              </tbody>
-                            </table>
-                          </div>
                           <!-- /.card-body -->
                         </div>
                       </div>
