@@ -1,7 +1,8 @@
 const {Router} = require('express');
 const router = Router();
 const postgres = require('../controller/postgres')
-const clientesSchema = require('../Schemas/schemas.js');
+const mongo = require('../controller/mongo')
+
 const path = require('path')
 
 
@@ -12,10 +13,12 @@ router.get('/verinfo', (req,res)=>{
 
 //POSTGRESSS
 router.post('/insertarCliente',postgres.insertarCliente);
+router.post('/addCategory',postgres.createCategory);
+router.post('/addProduct',postgres.createProduct);
 router.get('/getClientes', postgres.getClientes );
-
 router.get('/getProductos',postgres.getProductos)
-
+router.get('/getCategory',postgres.getCategory)
+router.get('/getCategoryByid/:id',postgres.getCategoryById)
 
 router.post('/insertar', async (req, res) => {
     const { name, value } = req.body;
@@ -30,40 +33,10 @@ router.post('/insertar', async (req, res) => {
 
 //MONGO
 
-router.post('/insertarm', async (req, res) => {
-    const {numeroHijos, lugarNacimiento,email, Ubicacion, religion, hobies, deportes, estadoCivil,identificacion} = req.body;
-    const tabla = "Clientes";
+router.post('/insertarm',mongo.insertCliente);
+router.get('/getClientesm',mongo.getClientes);
+router.delete('/borrarCliente',mongo.deleteCliente);
 
-    try{
-        const result = await client.query(`select * from "${tabla}" where "idCliente" = '${identificacion}'`);
-       
-        console.log(result.rows[0]);
-
-        if(result.rows.length > 0){
-            console.log("entro");
-            const data = {
-                "numeroHijos": numeroHijos,
-                "lugarNacimiento": lugarNacimiento,
-                "Ubicacion": Ubicacion,
-                "religion": religion,
-                "hobies": hobies,
-                "deportes": deportes,
-                "estadoCivil": estadoCivil,
-                "email": email
-            };
-            for (const key in result.rows[0]) {
-                data[key] = result.rows[0][key];
-            }
-            const cliente = new clientesSchema(data);
-            await cliente.save();
-            res.status(201).json(result.rows[0]);
-        }
-        
-
-    }catch(err){
-        res.status(400).json({ message: err.message });
-    }
-});
-
+router.post('/addProductm',mongo.createProduct);
 
 module.exports = router;

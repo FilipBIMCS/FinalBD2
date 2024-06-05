@@ -144,6 +144,7 @@
         <!-- Main content -->
         <div class="content mt-3">
           <div class="container">
+
             <!-- /.clientes -->
             <div class="row">
               <div class="col-lg-4">
@@ -167,64 +168,75 @@
                   <div class="card-body">
                     <div class="tab-content" id="custom-tabs-three-tabContent">
                       <div class="tab-pane active fade show" id="custom-tabs-three-clientCtr" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
-                        <form action="/insertarCliente" method="post">
+                        <form id="formCliente">
                           <div class="card card-info">
                             <div class="card-header">
                               <h3 class="card-title">clientes</h3>
                             </div>
+
+                              <!-- identificacion (campo) -->
                             <div class="card-body">
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" ><i class="fas fa-envelope"></i></span>
+                                  <span class="input-group-text" ><i class="fa fa-id-card"></i></span>
                                 </div>
-                                <input type="Identificacion" class="form-control" placeholder="Identificacion" name="identificacion">
+                                <input type="Identificacion" class="form-control" placeholder="Identificacion" name="idCliente">
                               </div>
-              
+
+                             <!-- nombre (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-person"></i></span>
                                 </div>
-                                <input type="Nombre" class="form-control" placeholder="Nombre" name="nombre">          
+                                <input type="Nombre" class="form-control" placeholder="Nombre" name="Nombre">          
                               </div>
                               
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
-                                </div>
-                                <input type="Apellido" class="form-control" placeholder="Apellido" name="apellido">          
-                              </div>
-
+                                <!-- apellido (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-person"></i></span>
                                 </div>
-                                <input type="Direccion" class="form-control" placeholder="Direccion" name="direccion">          
+                                <input type="Apellido" class="form-control" placeholder="Apellido" name="Apellido">          
                               </div>
 
+                                <!-- dirreccion (campo) -->
+                              <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="fa-solid fa-map-marker-alt"></i></span>
+                                </div>
+                                <input type="Direccion" class="form-control" placeholder="Direccion" name="Direccion">          
+                              </div>
+
+                                <!-- fecha nacimiento(campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
                                 </div>
-                                <input type="date" class="form-control" placeholder="Fecha de nacimiento" name="fechaNacimiento">
+                                <input type="date" class="form-control" placeholder="Fecha de nacimiento" name="FechaNacimiento">
                               </div>
+
+                                <!-- correo (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                 </div>
                                 <input type="email" class="form-control" placeholder="Email" name="email">
                               </div>
+
+                                <!-- telefono (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
                                 </div>
-                                <input type="tel" class="form-control" placeholder="Teléfono de casa" name="telcasa">
+                                <input type="tel" class="form-control" placeholder="Teléfono de casa" name="Telefono">
                               </div>
                               
+                                <!-- celular (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-mobile"></i></span>
                                 </div>
-                                <input type="tel" class="form-control" placeholder="Celular" name="cel">
+                                <input type="tel" class="form-control" placeholder="Celular" name="Celular">
                               </div>
                               <!-- /.row -->
         
@@ -232,25 +244,30 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
+                              <input type="button" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success" onclick="agregarCliente()">
                             </div>
                           </div>
                         </form>
+                          <!-- fin campos 1(crear) -->
                       </div>
+
+                        <!-- Actualizar clientes -->
                       <div class="tab-pane fade" id="custom-tabs-three-clientUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
                         <form>
                           <div class="card card-info">
                             <div class="card-header">
                               <h3 class="card-title">clientes</h3>
                             </div>
+                              <!-- identificacion (campo) -->
                             <div class="card-body">
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                  <span class="input-group-text"><i class="fa fa-id-card"></i></span>
                                 </div>
                                 <input type="Identificacion" class="form-control" placeholder="Identificacion">
                               </div>
-              
+
+                              <!-- nombre(campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
@@ -258,6 +275,7 @@
                                 <input type="Nombre" class="form-control" placeholder="Nombre">          
                               </div>
                               
+                                <!-- apellido (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
@@ -265,13 +283,15 @@
                                 <input type="Apellido" class="form-control" placeholder="Apellido">          
                               </div>
 
+                                <!-- dirreccion (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-map-marker-alt"></i></i></span>
                                 </div>
                                 <input type="Direccion" class="form-control" placeholder="Direccion">          
                               </div>
 
+                                <!-- fecha nacimiento (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></i></span>
@@ -279,13 +299,15 @@
                                 <input type="date" class="form-control" placeholder="Fecha de nacimiento">
                               </div>
 
+                              <!-- telefono casa (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
                                 </div>
                                 <input type="tel" class="form-control" placeholder="Teléfono de casa">
                               </div>
-                              
+
+                              <!-- telefono celular (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
                                   <span class="input-group-text"><i class="fa-solid fa-mobile"></i></span>
@@ -302,21 +324,26 @@
                             </div>
                           </div>
                         </form>
-                        
+                          <!-- fin actualizar cliente -->
+
+                          <!-- eliminar cliente (campo) -->
                       </div>
                       <div class="tab-pane fade" id="custom-tabs-three-clientDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
                         <div class="input-group mb-3">
-
+                          
+                          <!-- identificacion (campo) -->
                           <div class="input-group-append">
                             <span class="input-group-text"><i class="fa-solid fa-trash"></i></span>
                           </div>
-                          <input type="Borrar" class="form-control" placeholder="Identificacion">
+                          <input type="text" class="form-control" placeholder="Identificacion" id="borrarCliente" >
                         </div>
                         
+                          <!-- boton -->
                         <div class="card-footer">
-                          <input type="submit" name="Borrar" id="info" value="Enviar informacion" class="btn btn-success">
+                          <input type="button" name="Borrar" id="info" value="Eliminar informacion" class="btn btn-success" onclick="borrarCliente()">
                         </div>
                       </div>
+                        <!-- crea la tabla (campo) -->
                       <div class="tab-pane fade" id="custom-tabs-three-clientSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
                         <div class="card">
                           <div class="card-header bg-primary">
@@ -350,6 +377,9 @@
                   <!-- /.card -->
                 </div>
               </div>
+
+              <!---------------------------------------- -->
+              <!-- productos -->
               <div class="col-lg-4">
                 <div class="card card-primary card-outline card-tabs">
                   <div class="card-header p-0 pt-1 border-bottom-0">
@@ -376,80 +406,61 @@
                             <div class="card-header">
                               <h3 class="card-title">Productos</h3>
                             </div>
+
+                            <!-- identificacion (campo) -->
                             <div class="card-body">
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                  <span class="input-group-text"><i class="fa fa-barcode"></i></span>
                                 </div>
-                                <input type="Idproducto" class="form-control" placeholder="Identificacion">
+                                <input type="Idproducto" class="form-control" name="id" placeholder="Identificacion">
                               </div>
               
+                                <!-- cantidad disponible de productos (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
                                 </div>
-                                <input type="cantproductos" class="form-control" name="" placeholder="cantidad Disponible">          
+                                <input type="cantproductos" class="form-control" name="cantDisponible" placeholder="cantidad Disponible">          
                               </div>
 
+                              <!-- descripcion del producto (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
                                 </div>
-                                <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
+                                <input type="Descripcion" class="form-control" name="Descripcion" placeholder="Descripcion">          
                               </div>
 
+                              <!-- costo (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
                                 </div>
-                                <input type="Costo" class="form-control" name="" placeholder="Costo">          
+                                <input type="Costo" class="form-control" name="costo" placeholder="Costo">          
                               </div>
 
+                                <!-- precio de venta (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
                                 </div>
-                                <input type="Precio_venta" class="form-control" name="" placeholder="Precio de venta">          
+                                <input type="Precio_venta" class="form-control" name="PrecioVenta" placeholder="Precio de venta">          
                               </div>
 
+                                <!-- codigo de la categoria (campo) -->
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fa fa-tag"></i></span>
+                                </div>
+                                <input type="Codigo" class="form-control" placeholder="Codigo categoria Producto" name="codCatProd">
+                              </div>
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                 </div>
-                                <input type="Codigo" class="form-control" placeholder="Codigo_catProducto" name="codCatProd">
+                                <input type="Codigo" class="form-control" name="prodsDescrp" placeholder="Descripcion" value="">
                               </div>
-
-                              
-                              <button type="button" style="display: none;" class="btn btn-default" id="boton"  data-toggle="modal" data-target="#modal-default">
-                                Launch Default Modal
-                              </button>
-                              <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h4 class="modal-title">Default Modal</h4>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">×</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                          <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                        </div>
-                                        <input type="Codigo" class="form-control" id="prodsDescrp" placeholder="Descripcion" name="Descripcion" value="">
-                                      </div>
-                                    </div>
-                                    <div class="modal-footer justify-content-between">
-                                      <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
-                                      <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
-                                    </div>
-                                  </div>
-                                  <!-- /.modal-content -->
-                                </div>
-                                <!-- /.modal-dialog -->
-                              </div>
-                              
 
                               <!-- /.row -->
         
@@ -462,44 +473,52 @@
                           </div>
                         </form>
                       </div>
+
+                       <!-- actualizar productos -->
                       <div class="tab-pane fade" id="custom-tabs-three-productosUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
                         <form>
                           <div class="card card-info">
                             <div class="card-header">
                               <h3 class="card-title">Productos</h3>
                             </div>
+
+                             <!-- identificacion (campo) -->
                             <div class="card-body">
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                  <span class="input-group-text"><i class="fa fa-barcode"></i></span>
                                 </div>
-                                <input type="Idproducto" class="form-control" placeholder="Identificacion">
+                                <input type="Idproducto" class="form-control" placeholder="Identificacion" >
                               </div>
               
+                               <!-- cantidad de productos (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
                                 </div>
                                 <input type="cantproductos" class="form-control" name="" placeholder="cantidad Disponible">          
                               </div>
 
+                               <!-- descricpcion (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
                                 </div>
                                 <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
                               </div>
 
+                               <!-- costo (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
                                 </div>
                                 <input type="Costo" class="form-control" name="" placeholder="Costo">          
                               </div>
 
+                               <!-- precio de venta (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
                                 </div>
                                 <input type="Precio_venta" class="form-control" name="" placeholder="Precio de venta">          
                               </div>
@@ -515,15 +534,18 @@
                           </div>
                         </form>
                       </div>
+
+                       <!-- borrar producto (campo) -->
                       <div class="tab-pane fade" id="custom-tabs-three-productosDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
                         
+                         <!-- identificacion (campo) -->
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                           </div>
                           <input type="Idproducto" class="form-control" placeholder="Identificacion">
                           
-                        
+                         <!-- boton-->
                         </div>
                         <div class="card-footer">
                           <input type="submit" name="Borrar" id="info" value="Enviar informacion" class="btn btn-success">
@@ -562,6 +584,8 @@
                   <!-- /.card -->
                 </div>
               </div>
+
+               <!-- ---------------------------------------------------- -->
               <!-- /.categoria productos -->
               <div class="col-lg-4">
                 <div class="card card-primary card-outline card-tabs">
@@ -589,26 +613,25 @@
                             <div class="card-header">
                               <h3 class="card-title">Categorias Productos</h3>
                             </div>
+
+                             <!-- codigo(campo) -->
                             <div class="card-body">
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                  <span class="input-group-text"><i class="fa fa-tag"></i></span>
                                 </div>
                                 <input type="Codigo" class="form-control" placeholder="Codigo">
                               </div>
               
+                               <!-- Descripcion (campo) -->
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
                                 </div>
                                 <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
                               </div>
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="" placeholder="Lugar de nacimiento">          
-                              </div>
+
+                             
                               <!-- /.row -->
         
                               <!-- /input-group -->
@@ -629,23 +652,18 @@
                             <div class="card-body">
                               <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                  <span class="input-group-text"><i class="fa fa-tag"></i></span>
                                 </div>
                                 <input type="Codigo" class="form-control" placeholder="Codigo">
                               </div>
               
                               <div class="input-group mb-3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                                  <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
                                 </div>
                                 <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
                               </div>
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="" placeholder="Lugar de nacimiento">          
-                              </div>
+                            
                               <!-- /.row -->
         
                               <!-- /input-group -->

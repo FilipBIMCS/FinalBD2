@@ -18,7 +18,6 @@ mongo.connect();
 
 
 
-
 //parseo del body
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());

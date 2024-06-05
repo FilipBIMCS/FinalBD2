@@ -4,18 +4,32 @@ form.addEventListener('submit',(e) =>{
     e.preventDefault()
 
     const formdata = new FormData(form)
-    var codCatProds = formdata.get('codCatProd')
 
-    fetch(`/getCatbyId?${codCatProds}`).then(res=>{
-        if(res.status ==200){
-            //insercion de datos
-        }else{
-            Asignarvalor();
-            const close = document.getElementById('close')            
-            close.addEventListener('click',)
+    let Categoria = { 
+        codCategoria:formdata.get('codCatProd'),
+        Descripcion:formdata.get('prodsDescrp')
+    }
+    const data = new FormData()
+
+    formdata.forEach((value,key)=>{
+        if(key != 'codCatProd' || key != 'prodsDescrp'){
+            data[key] = value
         }
     })
-
+    data.Categoria = Categoria
+    fetch('/addProductm',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(res=>{
+        if(res.status==200){
+            res.json().then(data=>{
+                console.log(data)
+            })
+        }
+    })
 })
 
 
@@ -64,7 +78,6 @@ function cargaProductos(){
 function Asignarvalor(){
 
     const boton = document.getElementById('boton');
-
     boton.click()
     var saveButton = document.getElementById('saveChanges');
     saveButton.addEventListener('click', function() {

@@ -1,7 +1,7 @@
 function cargarDatos(){
     const tabla = document.getElementById('clientes')
 
-    fetch('/getClientes').then(res =>{
+    fetch('/getClientesm').then(res =>{
         if(res.status==200){
             res.json().then(data=>{
                 
@@ -40,6 +40,44 @@ function cargarDatos(){
                     tabla.getElementsByTagName('tbody')[0].appendChild(tr)
                 });
             })
+        }
+    })
+}
+
+function agregarCliente(){
+    const formCliente = document.getElementById('formCliente')
+    const Formdata = new FormData(formCliente)
+    const data = new FormData()
+
+    Formdata.forEach((value,key)=>{
+        data[key] = value
+    })
+
+
+    console.log(data)
+    fetch('/insertarm',{
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res=>{
+        if(res.status==200){
+            alert('Cliente agregado correctamente')
+        }
+    })
+}
+
+function borrarCliente(){
+    const clienteId = document.getElementById('borrarCliente').value
+    fetch(`/borrarCliente`,{
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res=>{
+        if(res.status==200){
+            alert('Cliente eliminado correctamente')
         }
     })
 }

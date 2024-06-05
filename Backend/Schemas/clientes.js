@@ -18,4 +18,5 @@ const clientesSchema = new mongose.Schema({
     idCliente: String
 });
 const cliente = mongose.model('Clientes', clientesSchema, 'Clientes');
+
 module.exports =  cliente;
