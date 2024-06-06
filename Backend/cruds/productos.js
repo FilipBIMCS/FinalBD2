@@ -23,7 +23,5 @@ async function insertOne (req,res){
 
 module.exports = {
     getAll,
-    insertOne,
-    deleteById,
-    getById
+    insertOne
 }
