@@ -116,538 +116,596 @@
     <script src="script.js"></script>
 </body>
 </html> 
+
 <!DOCTYPE html>
   <html lang="en">
   <head>
    
     
     <-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/48b7f93703.js" crossorigin="anonymous"></script>
-    <!-- Theme style -->
-    <link rel="stylesheet" href="css/adminlte.min.css">
-  </head>
-  <body class="hold-transition layout-top-nav">
-    <div class="wrapper">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/48b7f93703.js" crossorigin="anonymous"></script>
+<!-- Theme style -->
+<link rel="stylesheet" href="css/adminlte.min.css">
+</head>
 
-      <!-- Navbar -->
+<body class="hold-transition layout-top-nav">
+  <div class="wrapper">
 
-      <!-- /.navbar -->
+    <!-- Navbar -->
 
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-      
-        <!-- /.content-header -->
+    <!-- /.navbar -->
 
-        <!-- Main content -->
-        <div class="content mt-3">
-          <div class="container">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
 
-            <!-- /.clientes -->
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="card card-primary card-outline card-tabs">
-                  <div class="card-header p-0 pt-1 border-bottom-0">
-                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
-                      <li class="nav-item ">
-                        <a class="nav-link active" id="custom-tabs-three-tab" data-toggle="pill" href="#custom-tabs-three-clientCtr" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Crear</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link " id="custom-tabs-three-tab" data-toggle="pill" href="#custom-tabs-three-clientUpdate" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="true">Actualizar</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-tab" data-toggle="pill" href="#custom-tabs-three-clientDelete" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Borrar</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-tab" data-toggle="pill" href="#custom-tabs-three-clientSearch" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Mostrar</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <div class="tab-content" id="custom-tabs-three-tabContent">
-                      <div class="tab-pane active fade show" id="custom-tabs-three-clientCtr" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
-                        <form id="formCliente">
-                          <div class="card card-info">
-                            <div class="card-header">
-                              <h3 class="card-title">clientes</h3>
-                            </div>
+      <!-- /.content-header -->
 
+      <!-- Main content -->
+      <div class="content mt-3">
+        <div class="container">
 
-                              <!-- identificacion (campo) -->
-                            <div class="card-body">
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text" ><i class="fa fa-id-card"></i></span>
-                                </div>
-                                <input type="Identificacion" class="form-control" placeholder="Identificacion" name="idCliente">
-                              </div>
-
-                             <!-- nombre (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></span>
-                                </div>
-                                <input type="Nombre" class="form-control" placeholder="Nombre" name="Nombre">          
-                              </div>
-                              
-                                <!-- apellido (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></span>
-                                </div>
-                                <input type="Apellido" class="form-control" placeholder="Apellido" name="Apellido">          
-                              </div>
-
-                                <!-- dirreccion (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-map-marker-alt"></i></span>
-                                </div>
-                                <input type="Direccion" class="form-control" placeholder="Direccion" name="Direccion">          
-                              </div>
-
-                                <!-- fecha nacimiento(campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
-                                </div>
-                                <input type="date" class="form-control" placeholder="Fecha de nacimiento" name="FechaNacimiento">
-                              </div>
-
-                                <!-- correo (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                </div>
-                                <input type="email" class="form-control" placeholder="Email" name="email">
-                              </div>
-
-                                <!-- telefono (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
-                                </div>
-                                <input type="tel" class="form-control" placeholder="Teléfono de casa" name="Telefono">
-                              </div>
-                              
-                                <!-- celular (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-sharp fa-solid fa-mobile-retro"></i></span>
-                                </div>
-                                <input type="tel" class="form-control" placeholder="Celular" name="Celular">
-                              </div>
-
-                         
-                              <!-- /.row -->
-        
-                              <!-- /input-group -->
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                              <input type="button" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success" onclick="agregarCliente()">
-                            </div>
+          <!-- /.clientes -->
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card card-primary card-outline card-tabs">
+                <div class="card-header p-0 pt-1 border-bottom-0">
+                  <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                    <li class="nav-item ">
+                      <a class="nav-link active" id="custom-tabs-three-tab" data-toggle="pill"
+                        href="#custom-tabs-three-clientCtr" role="tab" aria-controls="custom-tabs-three-home"
+                        aria-selected="false">Crear</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " id="custom-tabs-three-tab" data-toggle="pill"
+                        href="#custom-tabs-three-clientUpdate" role="tab" aria-controls="custom-tabs-three-profile"
+                        aria-selected="true">Actualizar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-three-tab" data-toggle="pill"
+                        href="#custom-tabs-three-clientDelete" role="tab" aria-controls="custom-tabs-three-messages"
+                        aria-selected="false">Borrar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-three-tab" data-toggle="pill"
+                        href="#custom-tabs-three-clientSearch" role="tab" aria-controls="custom-tabs-three-settings"
+                        aria-selected="false">Mostrar</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content" id="custom-tabs-three-tabContent">
+                    <div class="tab-pane active fade show" id="custom-tabs-three-clientCtr" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-home-tab">
+                      <form id="formCliente">
+                        <div class="card card-info">
+                          <div class="card-header">
+                            <h3 class="card-title">clientes</h3>
                           </div>
-                        </form>
-                          <!-- fin campos 1(crear) -->
-                      </div>
 
-                        <!-- Actualizar clientes -->
-                      <div class="tab-pane fade" id="custom-tabs-three-clientUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
-                        <form>
-                          <div class="card card-info">
-                            <div class="card-header">
-                              <h3 class="card-title">clientes</h3>
-                            </div>
-                              <!-- identificacion (campo) -->
-                            <div class="card-body">
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fa fa-id-card"></i></span>
-                                </div>
-                                <input type="Identificacion" class="form-control" placeholder="Identificacion">
-                              </div>
 
-                              <!-- nombre(campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
-                                </div>
-                                <input type="Nombre" class="form-control" placeholder="Nombre">          
-                              </div>
-                              
-                                <!-- apellido (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
-                                </div>
-                                <input type="Apellido" class="form-control" placeholder="Apellido">          
-                              </div>
-
-                                <!-- dirreccion (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-map-marker-alt"></i></i></span>
-                                </div>
-                                <input type="Direccion" class="form-control" placeholder="Direccion">          
-                              </div>
-
-                                <!-- fecha nacimiento (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></i></span>
-                                </div>
-                                <input type="date" class="form-control" placeholder="Fecha de nacimiento">
-                              </div>
-
-                              <!-- telefono casa (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
-                                </div>
-                                <input type="tel" class="form-control" placeholder="Teléfono de casa">
-                              </div>
-
-                              <!-- telefono celular (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-mobile"></i></span>
-                                </div>
-                                <input type="tel" class="form-control" placeholder="Celular">
-                              </div>
-                              <!-- /.row -->
-        
-                              <!-- /input-group -->
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                              <input type="submit" name="Enviarinfo" id="info" value="Actualizar" class="btn btn-success">
-                            </div>
-                          </div>
-                        </form>
-                          <!-- fin actualizar cliente -->
-
-                          <!-- eliminar cliente (campo) -->
-                      </div>
-                      <div class="tab-pane fade" id="custom-tabs-three-clientDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
-                        <div class="input-group mb-3">
-                          
                           <!-- identificacion (campo) -->
-                          <div class="input-group-append">
-                            <span class="input-group-text"><i class="fa-solid fa-trash"></i></span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="Identificacion" id="borrarCliente" >
-                        </div>
-                        
-                          <!-- boton -->
-                        <div class="card-footer">
-                          <input type="button" name="Borrar" id="info" value="Eliminar informacion" class="btn btn-success" onclick="borrarCliente()">
-                        </div>
-                      </div>
-                        <!-- crea la tabla (campo) -->
-                      <div class="tab-pane fade" id="custom-tabs-three-clientSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
-                        <div class="card">
-                          <div class="card-header bg-primary">
-                            <button class="btn btn-success mx-auto" onclick="cargarDatos()"> Cargar datos</button>
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body table-responsive p-0" style="height: 300px;">
-                            <table class="table table-head-fixed text-nowrap" id="clientes">
-                              <thead>
-                                <tr>
-                                  <th>id</th>
-                                  <th>Nombre</th>
-                                  <th>Apellidos</th>
-                                  <th>Direccion</th>
-                                  <th>Fecha de nacimiento</th>
-                                  <th>Email</th>
-                                  <th>Telefono casa</th>
-                                  <th>Celular</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                
-                              </tbody>
-                            </table>
+                          <div class="card-body">
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                              </div>
+                              <input type="Identificacion" class="form-control" placeholder="Identificacion"
+                                name="idCliente">
+                            </div>
+
+                            <!-- nombre (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-person"></i></span>
+                              </div>
+                              <input type="Nombre" class="form-control" placeholder="Nombre" name="Nombre">
+                            </div>
+
+                            <!-- apellido (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-person"></i></span>
+                              </div>
+                              <input type="Apellido" class="form-control" placeholder="Apellido" name="Apellido">
+                            </div>
+
+                            <!-- dirreccion (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-map-marker-alt"></i></span>
+                              </div>
+                              <input type="Direccion" class="form-control" placeholder="Direccion" name="Direccion">
+                            </div>
+
+                            <!-- fecha nacimiento(campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                              </div>
+                              <input type="date" class="form-control" placeholder="Fecha de nacimiento"
+                                name="FechaNacimiento">
+                            </div>
+
+                            <!-- correo (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                              </div>
+                              <input type="email" class="form-control" placeholder="Email" name="email">
+                            </div>
+
+                            <!-- telefono (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                              </div>
+                              <input type="tel" class="form-control" placeholder="Teléfono de casa" name="Telefono">
+                            </div>
+
+                            <!-- celular (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-sharp fa-solid fa-mobile-retro"></i></span>
+                              </div>
+                              <input type="tel" class="form-control" placeholder="Celular" name="Celular">
+                            </div>
+
+
+                            <!-- /.row -->
+
+                            <!-- /input-group -->
                           </div>
                           <!-- /.card-body -->
+                          <div class="card-footer">
+                            <input type="button" name="Enviarinfo" id="info" value="Enviar informacion"
+                              class="btn btn-success" onclick="agregarCliente()">
+                          </div>
                         </div>
+                      </form>
+                      <!-- fin campos 1(crear) -->
+                    </div>
+
+                    <!-- Actualizar clientes -->
+                    <div class="tab-pane fade" id="custom-tabs-three-clientUpdate" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-profile-tab">
+                      <form id="actualizarClientes">
+                        <div class="card card-info">
+                          <div class="card-header">
+                            <h3 class="card-title">clientes</h3>
+                          </div>
+                          <!-- identificacion (campo) -->
+                          <div class="card-body">
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                              </div>
+                              <input type="Identificacion" class="form-control" name="idCliente" placeholder="Identificacion">
+                            </div>
+
+                            <!-- nombre(campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
+                              </div>
+                              <input type="Nombre" class="form-control" name="Nombre" placeholder="Nombre">
+                            </div>
+
+                            <!-- apellido (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-person"></i></i></span>
+                              </div>
+                              <input type="Apellido" class="form-control" name="Apellido" placeholder="Apellido">
+                            </div>
+
+                            <!-- dirreccion (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-map-marker-alt"></i></i></span>
+                              </div>
+                              <input type="Direccion" class="form-control" name="Direccion" placeholder="Direccion">
+                            </div>
+
+                            <!-- fecha nacimiento (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></i></span>
+                              </div>
+                              <input type="date" class="form-control" name="FechaNacimiento" placeholder="Fecha de nacimiento">
+                            </div>
+
+                            <!-- telefono casa (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                              </div>
+                              <input type="tel" class="form-control" name="Telefono" placeholder="Teléfono de casa">
+                            </div>
+
+                            <!-- telefono celular (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-mobile"></i></span>
+                              </div>
+                              <input type="tel" class="form-control" name="Celular" placeholder="Celular">
+                            </div>
+                            <!-- /.row -->
+
+                            <!-- /input-group -->
+                          </div>
+                          <!-- /.card-body -->
+                          <div class="card-footer">
+                            <input type="button" name="Enviarinfo" id="info" value="Actualizar" class="btn btn-success" onclick="ActualizarCliente()">
+                          </div>
+                        </div>
+                      </form>
+                      <!-- fin actualizar cliente -->
+
+                      <!-- eliminar cliente (campo) -->
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-three-clientDelete" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-messages-tab">
+                      <div class="input-group mb-3">
+
+                        <!-- identificacion (campo) -->
+                        <div class="input-group-append">
+                          <span class="input-group-text"><i class="fa-solid fa-trash"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Identificacion" id="borrarCliente">
+                      </div>
+
+                      <!-- boton -->
+                      <div class="card-footer">
+                        <input type="button" name="Borrar" id="info" value="Eliminar informacion"
+                          class="btn btn-success" onclick="borrarCliente()">
+                      </div>
+                    </div>
+                    <!-- crea la tabla (campo) -->
+                    <div class="tab-pane fade" id="custom-tabs-three-clientSearch" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-settings-tab">
+                      <div class="card">
+                        <div class="card-header bg-primary">
+                          <button class="btn btn-success mx-auto" onclick="cargarDatos()"> Cargar datos</button>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0" style="height: 300px;">
+                          <table class="table table-head-fixed text-nowrap" id="clientes">
+                            <thead>
+                              <tr>
+                                <th>id</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Direccion</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>Email</th>
+                                <th>Telefono casa</th>
+                                <th>Celular</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- /.card-body -->
                       </div>
                     </div>
                   </div>
-                  <!-- /.card -->
                 </div>
+                <!-- /.card -->
               </div>
+            </div>
 
-              <!---------------------------------------- -->
-              <!-- productos -->
-              <div class="col-lg-4">
-                <div class="card card-primary card-outline card-tabs">
-                  <div class="card-header p-0 pt-1 border-bottom-0">
-                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
-                      <li class="nav-item ">
-                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-productos" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Crear</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link " id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-productosUpdate" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="true">Actualizar</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-productosDelete" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Borrar</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="custom-tabs-three-settings-tab" data-toggle="pill" href="#custom-tabs-three-productosSearch" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Mostrar</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <div class="tab-content" id="custom-tabs-three-tabContent">
-                      <div class="tab-pane active fade show" id="custom-tabs-three-productos" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
-                        <form id="formProductos">
-                          <div class="card card-info">
-                            <div class="card-header">
-                              <h3 class="card-title">Productos</h3>
-                            </div>
-
-                            <!-- identificacion (campo) -->
-                            <div class="card-body">
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fa fa-barcode"></i></span>
-                                </div>
-                                <input type="Idproducto" class="form-control" name="id" placeholder="Identificacion">
-                              </div>
-              
-                                <!-- cantidad disponible de productos (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
-                                </div>
-                                <input type="cantproductos" class="form-control" name="cantDisponible" placeholder="cantidad Disponible">          
-                              </div>
-
-                              <!-- descripcion del producto (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
-                                </div>
-                                <input type="Descripcion" class="form-control" name="Descripcion" placeholder="Descripcion">          
-                              </div>
-
-                              <!-- costo (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
-                                </div>
-                                <input type="Costo" class="form-control" name="costo" placeholder="Costo">          
-                              </div>
-
-                                <!-- precio de venta (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
-                                </div>
-                                <input type="Precio_venta" class="form-control" name="PrecioVenta" placeholder="Precio de venta">          
-                              </div>
-
-                                <!-- codigo de la categoria (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fa fa-tag"></i></span>
-                                </div>
-                                <input type="Codigo" class="form-control" placeholder="Codigo categoria Producto" name="codCatProd">
-                              </div>
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                </div>
-                                <input type="Codigo" class="form-control" name="prodsDescrp" placeholder="Descripcion" value="">
-                              </div>
-
-                              <!-- /.row -->
-        
-                              <!-- /input-group -->
-                            </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                              <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion" class="btn btn-success">
-                            </div>
+            <!---------------------------------------- -->
+            <!-- productos -->
+            <div class="col-lg-4">
+              <div class="card card-primary card-outline card-tabs">
+                <div class="card-header p-0 pt-1 border-bottom-0">
+                  <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                    <li class="nav-item ">
+                      <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill"
+                        href="#custom-tabs-three-productos" role="tab" aria-controls="custom-tabs-three-home"
+                        aria-selected="false">Crear</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " id="custom-tabs-three-profile-tab" data-toggle="pill"
+                        href="#custom-tabs-three-productosUpdate" role="tab" aria-controls="custom-tabs-three-profile"
+                        aria-selected="true">Actualizar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill"
+                        href="#custom-tabs-three-productosDelete" role="tab" aria-controls="custom-tabs-three-messages"
+                        aria-selected="false">Borrar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-three-settings-tab" data-toggle="pill"
+                        href="#custom-tabs-three-productosSearch" role="tab" aria-controls="custom-tabs-three-settings"
+                        aria-selected="false">Mostrar</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content" id="custom-tabs-three-tabContent">
+                    <div class="tab-pane active fade show" id="custom-tabs-three-productos" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-home-tab">
+                      <form id="formProductos">
+                        <div class="card card-info">
+                          <div class="card-header">
+                            <h3 class="card-title">Productos</h3>
                           </div>
-                        </form>
-                      </div>
 
-                       <!-- actualizar productos -->
-                      <div class="tab-pane fade" id="custom-tabs-three-productosUpdate" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
-                        <form>
-                          <div class="card card-info">
-                            <div class="card-header">
-                              <h3 class="card-title">Productos</h3>
+                          <!-- identificacion (campo) -->
+                          <div class="card-body">
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-barcode"></i></span>
+                              </div>
+                              <input type="Idproducto" class="form-control" name="id" placeholder="Identificacion">
                             </div>
 
-                             <!-- identificacion (campo) -->
-                            <div class="card-body">
-                              <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="fa fa-barcode"></i></span>
-                                </div>
-                                <input type="Idproducto" class="form-control" placeholder="Identificacion" >
+                            <!-- cantidad disponible de productos (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
                               </div>
-              
-                               <!-- cantidad de productos (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
-                                </div>
-                                <input type="cantproductos" class="form-control" name="" placeholder="cantidad Disponible">          
-                              </div>
-
-                               <!-- descricpcion (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
-                                </div>
-                                <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">          
-                              </div>
-
-                               <!-- costo (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
-                                </div>
-                                <input type="Costo" class="form-control" name="" placeholder="Costo">          
-                              </div>
-
-                               <!-- precio de venta (campo) -->
-                              <div class="input-group mb-3">
-                                <div class="input-group-append">
-                                  <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
-                                </div>
-                                <input type="Precio_venta" class="form-control" name="" placeholder="Precio de venta">          
-                              </div>
-
-                              <!-- /.row -->
-        
-                              <!-- /input-group -->
+                              <input type="cantproductos" class="form-control" name="cantDisponible"
+                                placeholder="cantidad Disponible">
                             </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                              <input type="submit" name="Enviarinfo" id="info" value="Actualizar" class="btn btn-success">
-                            </div>
-                          </div>
-                        </form>
-                      </div>
 
-                       <!-- borrar producto (campo) -->
-                      <div class="tab-pane fade" id="custom-tabs-three-productosDelete" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
-                        
-                         <!-- identificacion (campo) -->
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                          </div>
-                          <input type="Idproducto" class="form-control" placeholder="Identificacion">
-                          
-                         <!-- boton-->
-                        </div>
-                        <div class="card-footer">
-                          <input type="submit" name="Borrar" id="info" value="Enviar informacion" class="btn btn-success">
-                        </div>
-                      
-                      </div>
-                      
-                      <div class="tab-pane fade" id="custom-tabs-three-productosSearch" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
-                        <div class="card">
-                          <div class="card-header bg-primary">
-                            <button class="btn btn-success" onclick="cargaProductos()">Cargar datos</button>
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body table-responsive p-0" style="height: 300px;">
-                            <table class="table table-head-fixed text-nowrap"  id="productos">
-                              <thead>
-                                <tr>
-                                  <th>idProducto</th>
-                                  <th>Descripcion</th>
-                                  <th>Catnidad disponible</th>
-                                  <th>Costo</th>
-                                  <th>Precio venta</th>
-                                  <th>Codigo categoria</th>
-                                </tr>
-                              </thead>
-                              <tbody class="mx-auto text-center">
-                                
-                              </tbody>
-                            </table>
+                            <!-- descripcion del producto (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
+                              </div>
+                              <input type="Descripcion" class="form-control" name="Descripcion"
+                                placeholder="Descripcion">
+                            </div>
+
+                            <!-- costo (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
+                              </div>
+                              <input type="Costo" class="form-control" name="costo" placeholder="Costo">
+                            </div>
+
+                            <!-- precio de venta (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
+                              </div>
+                              <input type="Precio_venta" class="form-control" name="PrecioVenta"
+                                placeholder="Precio de venta">
+                            </div>
+
+                            <!-- codigo de la categoria (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-tag"></i></span>
+                              </div>
+                              <input type="Codigo" class="form-control" placeholder="Codigo categoria Producto"
+                                name="codCatProd">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                              </div>
+                              <input type="Codigo" class="form-control" name="prodsDescrp" placeholder="Descripcion"
+                                value="">
+                            </div>
+
+                            <!-- /.row -->
+
+                            <!-- /input-group -->
                           </div>
                           <!-- /.card-body -->
+                          <div class="card-footer">
+                            <input type="submit" name="Enviarinfo" id="info" value="Enviar informacion"
+                              class="btn btn-success">
+                          </div>
                         </div>
+                      </form>
+                    </div>
+
+                    <!-- actualizar productos -->
+                    <div class="tab-pane fade" id="custom-tabs-three-productosUpdate" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-profile-tab">
+                      <form>
+                        <div class="card card-info">
+                          <div class="card-header">
+                            <h3 class="card-title">Productos</h3>
+                          </div>
+
+                          <!-- identificacion (campo) -->
+                          <div class="card-body">
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-barcode"></i></span>
+                              </div>
+                              <input type="Idproducto" class="form-control" placeholder="Identificacion">
+                            </div>
+
+                            <!-- cantidad de productos (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
+                              </div>
+                              <input type="cantproductos" class="form-control" name=""
+                                placeholder="cantidad Disponible">
+                            </div>
+
+                            <!-- descricpcion (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-file-alt"></i></span>
+                              </div>
+                              <input type="Descripcion" class="form-control" name="" placeholder="Descripcion">
+                            </div>
+
+                            <!-- costo (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
+                              </div>
+                              <input type="Costo" class="form-control" name="" placeholder="Costo">
+                            </div>
+
+                            <!-- precio de venta (campo) -->
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
+                              </div>
+                              <input type="Precio_venta" class="form-control" name="" placeholder="Precio de venta">
+                            </div>
+
+                            <!-- /.row -->
+
+                            <!-- /input-group -->
+                          </div>
+                          <!-- /.card-body -->
+                          <div class="card-footer">
+                            <input type="submit" name="Enviarinfo" id="info" value="Actualizar" class="btn btn-success">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <!-- borrar producto (campo) -->
+                    <div class="tab-pane fade" id="custom-tabs-three-productosDelete" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-messages-tab">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-trash"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Identificación" id="idProducto">
+                      </div>
+                      <!-- boton -->
+                      <div class="card-footer">
+                        <input type="button" name="Borrar" id="btnBorrarProducto" value="Eliminar información"
+                          class="btn btn-success" onclick="borrarProducto()">
+                      </div>
+                    </div>
+
+
+
+                    <div class="tab-pane fade" id="custom-tabs-three-productosSearch" role="tabpanel"
+                      aria-labelledby="custom-tabs-three-settings-tab">
+                      <div class="card">
+                        <div class="card-header bg-primary">
+                          <button class="btn btn-success" onclick="cargaProductos()">Cargar datos</button>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0" style="height: 300px;">
+                          <table class="table table-head-fixed text-nowrap" id="productos">
+                            <thead>
+                              <tr>
+                                <th>idProducto</th>
+                                <th>Descripcion</th>
+                                <th>Catnidad disponible</th>
+                                <th>Costo</th>
+                                <th>Precio venta</th>
+                                <th>Codigo categoria</th>
+                              </tr>
+                            </thead>
+                            <tbody class="mx-auto text-center">
+
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- /.card-body -->
                       </div>
                     </div>
                   </div>
-                  <!-- /.card -->
                 </div>
+                <!-- /.card -->
               </div>
+            </div>
 
-               <!-- ---------------------------------------------------- -->
-              <!-- /.categoria productos -->
-              
-                          <!-- /.card-body -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /.card -->
-                </div>
-                
-              </div>
-              
-            </div>  
-           
-            <!-- /.row -->
-          </div><!-- /.container-fluid -->
+            <!-- ---------------------------------------------------- -->
+            <!-- /.categoria productos -->
+
+            <!-- /.card-body -->
+          </div>
         </div>
-        <!-- /.content -->
       </div>
-      <!-- /.content-wrapper -->
-
-      <!-- Control Sidebar -->
-      <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-      </aside>
-      <!-- /.control-sidebar -->
-
-      <!-- Main Footer -->
-      <footer class="main-footer">
-        <!-- To the right -->
-        <div class="float-right d-none d-sm-inline">
-          Anything you want
-        </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-      </footer>
     </div>
-    <!-- ./wrapper -->
+    <!-- /.card -->
+  </div>
 
-    <!-- REQUIRED SCRIPTS -->
+  </div>
 
-    <!-- jQuery -->
-    <script src="jquerys/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="jquerys/bootstrap.bundle.min.js"></script>
-    <script src="js/clientes.js"></script>
-    <script src="js/productos.js"></script>
-    <!-- AdminLTE App -->
-    <script src="jquerys/adminlte.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('#saveChanges').click(function() {
-          var inputValue = $('#prodsDescrp').val(); // Obtiene el valor del input
-          console.log("Valor del input: " + inputValue); // Aquí puedes hacer lo que necesites con el valor del input
-          // Actualiza el valor del input
-          $('#prodsDescrp').val(inputValue);
-        });
+  </div>
+
+  <!-- /.row -->
+  </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="jquerys/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+
+  
+  <script>
+  function borrarProducto() {
+    const productoId = document.getElementById('idProducto').value;
+    fetch(`/borrarProducto/${productoId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => {
+        if (res.status == 200) {
+            alert('Producto eliminado correctamente');
+        }
+    }).catch(error => {
+        console.error('Error al eliminar el producto:', error);
+    });
+}
+  </script>
+
+
+
+  <script src="jquerys/bootstrap.bundle.min.js"></script>
+  <script src="js/clientes.js"></script>
+  <script src="js/productos.js"></script>
+  <!-- AdminLTE App -->
+  <script src="jquerys/adminlte.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#saveChanges').click(function () {
+        var inputValue = $('#prodsDescrp').val(); // Obtiene el valor del input
+        console.log("Valor del input: " + inputValue); // Aquí puedes hacer lo que necesites con el valor del input
+        // Actualiza el valor del input
+        $('#prodsDescrp').val(inputValue);
       });
-    </script>
-  </body>
-</html>
+    });
+  </script>
+</body>
 
+</html>

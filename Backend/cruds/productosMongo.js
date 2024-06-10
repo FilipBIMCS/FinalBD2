@@ -13,19 +13,16 @@ async function createProducto(req, res) {
     }
 }
 
-async function deleteById(req, res) {
+async function deleteProductById(req, res) {
     try {
-        const { idProducto } = req.params;
-        const result = await client.query('DELETE FROM "Productos" WHERE "idProducto" = $1 RETURNING *', [idProducto]);
-        if (result.rowCount === 0) {
-            res.status(404).json({ message: 'Producto no encontrado' });
-        } else {
-            res.status(200).json({ message: 'Producto eliminado', producto: result.rows[0] });
-        }
-    } catch (err) {
-        res.status(400).json({ message: err.message });
+        const { id } = req.params;
+        await productos.deleteProductById(id);
+        res.json({ message: 'Producto eliminado por ID' });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
     }
 }
+
 
 async function getById(req, res) {
     try {
@@ -41,6 +38,9 @@ async function getById(req, res) {
     }
 }
 
+
+
 module.exports = {
-    createProducto
+    createProducto,
+    deleteProductById
 }

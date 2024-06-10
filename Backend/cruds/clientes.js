@@ -26,7 +26,9 @@ async function insertOne(req,res){
     }
 
 }
-module.exports ={
+
+
+module.exports= {
     getAll,
     insertOne
 }

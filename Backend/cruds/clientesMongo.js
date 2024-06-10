@@ -22,8 +22,9 @@ async function addCliente(req, res) {
 
 async function updateCliente(req, res) {
     try {
-        const { id } = req.params;
-        await clientesSchema.findByIdAndUpdate(id, req.body);
+        console.log('body',req.body);
+        const { idCliente } = req.body;
+        await clientesSchema.findOneAndUpdate({idCliente:idCliente}, req.body)
         res.json({ message: 'Cliente actualizado' });
     }
     catch (error) {

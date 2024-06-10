@@ -36,7 +36,8 @@ router.post('/insertar', async (req, res) => {
 router.post('/insertarm',mongo.insertCliente);
 router.get('/getClientesm',mongo.getClientes);
 router.delete('/borrarCliente',mongo.deleteCliente);
-
+router.put('/updateClient',mongo.updateCliente)
 router.post('/addProductm',mongo.createProduct);
+
 
 module.exports = router;

@@ -86,3 +86,5 @@ function Asignarvalor(){
         console.log("Valor del input: " + inputValue);
     })
 }
+
+

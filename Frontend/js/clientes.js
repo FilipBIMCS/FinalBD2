@@ -5,6 +5,8 @@ function cargarDatos(){
         if(res.status==200){
             res.json().then(data=>{
                 
+                //Limpiar tabla
+                tabla.getElementsByTagName('tbody')[0].innerHTML = ''
                 data.forEach(element => {
                     const tr = document.createElement('tr')
 
@@ -78,6 +80,28 @@ function borrarCliente(){
     }).then(res=>{
         if(res.status==200){
             alert('Cliente eliminado correctamente')
+        }
+    })
+}
+
+function ActualizarCliente(){
+    const formCliente = document.getElementById('actualizarClientes')
+    const Formdata = new FormData(formCliente)
+    const data = new FormData()
+
+    Formdata.forEach((value,key)=>{
+        data[key] = value
+    })
+
+    fetch(`/updateClient`,{
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res=>{
+        if(res.status==200){
+            alert('Cliente actualizado correctamente')
         }
     })
 }
