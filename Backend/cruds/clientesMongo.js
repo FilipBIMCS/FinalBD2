@@ -1,5 +1,7 @@
 const clientesSchema = require('../Schemas/clientes');
 
+//Obtiene todos los clientes de la base de datos
+
 async function getClientes(req, res) {
     try {
         const clientes = await clientesSchema.find();
@@ -8,6 +10,8 @@ async function getClientes(req, res) {
         res.status(500).json({ error: error.message });
     }
 }
+
+//Agrega un nuevo cliente a la base de datos
 
 async function addCliente(req, res) {
     try {
@@ -19,6 +23,8 @@ async function addCliente(req, res) {
         res.status(500).json({ error: error.message });
     }
 }
+
+//Actualiza la información de un cliente existente
 
 async function updateCliente(req, res) {
     try {
@@ -32,6 +38,8 @@ async function updateCliente(req, res) {
     }
 }
 
+//Elimina un cliente existente de la base de datos
+
 async function deleteCliente(req, res) {
     try {
         const { id } = req.body;
@@ -41,6 +49,8 @@ async function deleteCliente(req, res) {
         res.status(500).json({ error: error.message });
     }
 }
+
+//exporta las funciones definidas anteriormente para que puedan ser importadas y utilizadas en otros archivos dentro de la aplicación
 
 module.exports = {
     getClientes,

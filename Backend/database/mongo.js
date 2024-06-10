@@ -1,7 +1,9 @@
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+//biblioteca de Node.js modelar los datos con MongoDB.
 const mongoose = require('mongoose');
+//conecta a la bd
 const uri = "mongodb://localhost:27017/Info_Clientes";
 
+//establecer una conexion a la bd
 function connect() {
     mongoose.connect(uri)
         .then(() => {
@@ -12,9 +14,9 @@ function connect() {
         });
 }
 
-const productosSchema = require('../Schemas/productos'); // Importa el esquema de productos
+//const productosSchema = require('../Schemas/productos'); // Importa el esquema de productos
 
-async function deleteProducto(req, res) {
+/*async function deleteProducto(req, res) {
     try {
         const { id } = req.params; // Obtén el ID del producto de los parámetros de la solicitud
         await productosSchema.findByIdAndDelete(id); // Busca y elimina el producto por su ID
@@ -26,5 +28,5 @@ async function deleteProducto(req, res) {
 
 module.exports = { deleteProducto };
 
-
+*/
 module.exports = { connect };

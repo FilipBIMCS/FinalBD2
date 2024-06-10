@@ -1,5 +1,6 @@
 const client = require('../database/postgres.js');
 
+// Obtiene todas las categorías de productos
 
 async function getAll(req, res) {
     console.log('GET /categorys');
@@ -11,6 +12,8 @@ async function getAll(req, res) {
         res.status(400).json({ message: 'Categories not found' });
     }
 }
+
+//Obtiene una categoría de producto específica por su ID
 
 async function getOne(req, res) {
     try {
@@ -30,6 +33,8 @@ async function getOne(req, res) {
     }
 }
 
+//Crea una nueva categoría de producto.
+
 async function create(req, res) {
     try {
         const { Cod_Categoria, Descripcion} = req.body;
@@ -41,7 +46,7 @@ async function create(req, res) {
         res.status(400).json('error al crear la categoria');
     }
 }
-
+//Exporta las funciones getAll, getOne y create para que puedan ser utilizadas en otros archivos de la aplicación.
 module.exports = {
     getAll,
     getOne,
