@@ -23,7 +23,7 @@ form.addEventListener('submit',(e) =>
             data[key] = value
         }
     })
-    
+
     data.Categoria = Categoria
     fetch('/addProductm',{
         method:'POST',
@@ -98,11 +98,13 @@ function cargaProductos(){
 
 function Asignarvalor(){
 
-    const boton = document.getElementById('boton');//busca el boton
-    boton.click()//click del boton
+    const boton = document.getElementById('boton');// Busca el elemento DOM con id 'boton'
+    boton.click()// Simula un click en el botón identificado por 'boton'
 
+    //Busca el elemento del DOM con id 'saveChanges'
     var saveButton = document.getElementById('saveChanges');
 
+    
     saveButton.addEventListener('click', function() 
     {
         var input = document.getElementById('prodsDescrp');

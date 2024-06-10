@@ -1,5 +1,6 @@
 const productosSchema = require('../Schemas/productos');
 
+//Crea un nuevo producto en la base de datos Mongo
 
 async function createProducto(req, res) {
     try {
@@ -13,6 +14,8 @@ async function createProducto(req, res) {
     }
 }
 
+//Elimina un producto de la base de datos MongoDB por su ID
+
 async function deleteProductById(req, res) {
     try {
         const { id } = req.params;
@@ -23,6 +26,7 @@ async function deleteProductById(req, res) {
     }
 }
 
+//Obtiene un producto de la base de datos SQL por su ID
 
 async function getById(req, res) {
     try {
@@ -38,7 +42,7 @@ async function getById(req, res) {
     }
 }
 
-
+//exporta las funciones definidas anteriormente para que puedan ser importadas y utilizadas en los otros archivos dentro de la aplicación
 
 module.exports = {
     createProducto,
