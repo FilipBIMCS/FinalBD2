@@ -20,6 +20,7 @@ router.get('/getProductos',postgres.getProductos)
 router.get('/getCategory',postgres.getCategory)
 router.get('/getCategoryByid/:id',postgres.getCategoryById)
 
+//puente entre la bd y la pagina
 router.post('/insertar', async (req, res) => {
     const { name, value } = req.body;
     const tabla = "Categorias";
@@ -36,8 +37,8 @@ router.post('/insertar', async (req, res) => {
 router.post('/insertarm',mongo.insertCliente);
 router.get('/getClientesm',mongo.getClientes);
 router.delete('/borrarCliente',mongo.deleteCliente);
-router.put('/updateClient',mongo.updateCliente)
-router.post('/addProductm',mongo.createProduct);
+router.put('/updateClient',mongo.updateCliente)//pone
+router.post('/addProductm',mongo.createProduct);//crear
 
 
 module.exports = router;

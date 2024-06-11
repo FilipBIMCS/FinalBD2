@@ -16,7 +16,7 @@ async function createProducto(req, res) {
 
 //Elimina un producto de la base de datos MongoDB por su ID
 
-async function deleteProductById(req, res) {
+/*async function deleteProductById(req, res) {
     try {
         const { id } = req.params;
         await productos.deleteProductById(id);
@@ -25,8 +25,8 @@ async function deleteProductById(req, res) {
         res.status(500).json({ error: error.message });
     }
 }
-
-//Obtiene un producto de la base de datos SQL por su ID
+*/
+//Obtiene un producto de la base de datos SQL por su ID mostrarlo en la tabla
 
 async function getById(req, res) {
     try {
@@ -46,5 +46,5 @@ async function getById(req, res) {
 
 module.exports = {
     createProducto,
-    deleteProductById
+    //deleteProductById
 }

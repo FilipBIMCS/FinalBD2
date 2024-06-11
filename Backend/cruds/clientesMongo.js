@@ -50,7 +50,8 @@ async function deleteCliente(req, res) {
     }
 }
 
-//exporta las funciones definidas anteriormente para que puedan ser importadas y utilizadas en otros archivos dentro de la aplicación
+//exporta las funciones definidas anteriormente para que puedan ser importadas 
+//y utilizadas en otros archivos dentro de la aplicación
 
 module.exports = {
     getClientes,

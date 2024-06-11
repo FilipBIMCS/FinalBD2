@@ -6,9 +6,6 @@ const path = require('path');
 const mongo = require('./database/mongo.js');
 
 
-
-//configura y arranca un servidor, y luego informa en la consola que el servidor
-// esta listo y en que direccion se puede acceder a el
 const PORT = process.env.PORT || 3004;
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`);
