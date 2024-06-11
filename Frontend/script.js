@@ -4,6 +4,8 @@ document.getElementById('dataForm').addEventListener('submit', async function(ev
     const name = document.getElementById('name').value;
     const value = document.getElementById('value').value;
 
+    // Envía los datos al servidor usando fetch con el método POST
+
     const response = await fetch('/insertar', {
         method: 'POST',
         headers: {
@@ -11,10 +13,12 @@ document.getElementById('dataForm').addEventListener('submit', async function(ev
         },
         body: JSON.stringify({ name, value })
     });
-
+    // Espera la respuesta del servidor y la convierte a JSON
     const result = await response.json();
     document.getElementById('response').innerText = JSON.stringify(result, null, 2);
 });
+
+// Muestra la respuesta del servidor en el elemento con el id 'response'
 
 document.getElementById('mongo').addEventListener('submit', async function(event) {
     event.preventDefault();
@@ -27,6 +31,7 @@ document.getElementById('mongo').addEventListener('submit', async function(event
         data.append(key, value);
     }
     
+    // Envía los datos al servidor usando fetch con el método POST
 
     const response = await fetch('/insertarm', {
         method: 'POST',

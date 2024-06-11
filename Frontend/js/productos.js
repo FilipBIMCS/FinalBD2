@@ -1,7 +1,6 @@
 const form = document.getElementById('formProductos')
 
 //maneja el envío de un formulario en una página
-//
 form.addEventListener('submit',(e) =>
 {
     e.preventDefault()
@@ -52,13 +51,14 @@ function cargaProductos(){
 
                 // Limpia el contenido actual de tbody
                 tabla.getElementsByTagName('tbody')[0].innerHTML = '' 
-              
+                
+                // Itera sobre los datos recibidos
                 data.forEach(element => {
 
                     // Para cada elemento en los datos recibidos, crea una nueva fila (<tr>)
                     const tr = document.createElement('tr')
 
-                     
+                    // Crea una celda (<td>) para el ID del producto y le asigna el valor correspondiente
                     const id = document.createElement('td')
                     id.innerText = element.idProducto 
 
@@ -71,11 +71,17 @@ function cargaProductos(){
                     const apellidos = document.createElement('td')
                     apellidos.innerText = element.CantDisponible
 
+                    // Crea una celda (<td>) para el costo del producto
+
                     const direccion = document.createElement('td')
                     direccion.innerText = element.Costo
 
+                    // Crea una celda (<td>) para el precio de venta del producto
+
                     const FechaNacimiento=document.createElement('td')
                     FechaNacimiento.innerText = element.PrecioVenta
+
+                    // Crea una celda (<td>) para el código de la categoría del producto
 
                     const email = document.createElement('td')
                     email.innerText = element.Cod_Categoria
@@ -96,20 +102,22 @@ function cargaProductos(){
     })
 }
 
+//control de eventos y manejo de datos en la interfaz de usuario 
 function Asignarvalor(){
 
-    const boton = document.getElementById('boton');// Busca el elemento DOM con id 'boton'
-    boton.click()// Simula un click en el botón identificado por 'boton'
+    const boton = document.getElementById('boton');// busca un elemento en el DOM con el id boton
+    boton.click() //simula un evento de click en ese botón
 
     //Busca el elemento del DOM con id 'saveChanges'
     var saveButton = document.getElementById('saveChanges');
 
-    
+    //Captura el valor actualmente ingresado en ese campo de entrada (input) 
+    //y lo guarda en la variable inputValue.
     saveButton.addEventListener('click', function() 
     {
         var input = document.getElementById('prodsDescrp');
         var inputValue = input.value; // Obtiene el valor del input
-        console.log("Valor del input: " + inputValue);
+        console.log("Valor del input: " + inputValue); // Muestra el valor obtenido en la consola
     })
 }
 
