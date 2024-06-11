@@ -39,4 +39,4 @@ app.use(express.static(path.resolve(proyectPath)));
 
 // Rutas al directorio tu API
 const router =require('./routes/routes.js');
-app.use('/', router);
+app.use('/', router); 

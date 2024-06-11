@@ -16,7 +16,7 @@ router.post('/insertarCliente',postgres.insertarCliente);
 router.post('/addCategory',postgres.createCategory);
 router.post('/addProduct',postgres.createProduct);
 router.get('/getClientes', postgres.getClientes );
-router.get('/getProductos',postgres.getProductos)
+
 router.get('/getCategory',postgres.getCategory)
 router.get('/getCategoryByid/:id',postgres.getCategoryById)
 
@@ -39,6 +39,6 @@ router.get('/getClientesm',mongo.getClientes);
 router.delete('/borrarCliente',mongo.deleteCliente);
 router.put('/updateClient',mongo.updateCliente)//pone
 router.post('/addProductm',mongo.createProduct);//crear
-
+router.get('/getProductos',mongo.getProductos)
 
 module.exports = router;

@@ -22,6 +22,10 @@ function deleteCliente(req, res) {
 function createProduct(req, res) {
     products.createProducto(req, res);
 }
+
+function getProductos(req, res) {
+    products.getProductos(req, res);
+}
 //Aquí se exportan las funciones
 module.exports = {
     insertCliente,
@@ -29,5 +33,6 @@ module.exports = {
     deleteCliente,
     createProduct,
     //deleteProductById, 
-    updateCliente
+    updateCliente,
+    getProductos
 };

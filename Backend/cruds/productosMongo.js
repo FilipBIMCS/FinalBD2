@@ -2,8 +2,18 @@ const productosSchema = require('../Schemas/productos');
 
 //Crea un nuevo producto en la base de datos Mongo
 
+async function getProductos(req, res) {
+    try {
+        const productos = await productosSchema.find();
+        res.status(200).json(productos);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+}
+
 async function createProducto(req, res) {
     try {
+        console.log("holi");
         const data = req.body;
         const producto = new productosSchema(data);
         await producto.save();
@@ -46,5 +56,6 @@ async function getById(req, res) {
 
 module.exports = {
     createProducto,
+    getProductos,
     //deleteProductById
 }

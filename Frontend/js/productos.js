@@ -60,7 +60,7 @@ function cargaProductos(){
 
                     // Crea una celda (<td>) para el ID del producto y le asigna el valor correspondiente
                     const id = document.createElement('td')
-                    id.innerText = element.idProducto 
+                    id.innerText = element.id
 
 
                     //Crear celda para el nombre
@@ -69,12 +69,12 @@ function cargaProductos(){
 
                     //Crear celda para el apellido
                     const apellidos = document.createElement('td')
-                    apellidos.innerText = element.CantDisponible
+                    apellidos.innerText = element.Cantidad
 
                     // Crea una celda (<td>) para el costo del producto
 
                     const direccion = document.createElement('td')
-                    direccion.innerText = element.Costo
+                    direccion.innerText = element.costo
 
                     // Crea una celda (<td>) para el precio de venta del producto
 
@@ -84,7 +84,7 @@ function cargaProductos(){
                     // Crea una celda (<td>) para el código de la categoría del producto
 
                     const email = document.createElement('td')
-                    email.innerText = element.Cod_Categoria
+                    email.innerText = element.Categoria.codCategoria
 
                      // Agrega las celdas (<td>) a la fila (<tr>)
                     tr.appendChild(id)
